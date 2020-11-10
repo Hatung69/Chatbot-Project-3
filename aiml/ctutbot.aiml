@@ -416,10 +416,13 @@
 
 	<!-- Giới thiệu trường -->
 
-	<category><pattern>Giới thiệu trường</pattern><template>Trường Đại học Kỹ thuật - Công nghệ Cần Thơ (CTUT - Can Tho University of Technology) là trường đại học công lập chuyên đào tạo khối ngành kỹ thuật tại Thành phố Cần Thơ. Trường trực thuộc Ủy ban Nhân dân Thành phố Cần Thơ, chịu sự giám sát về giáo dục của Bộ Giáo dục và Đào tạo.</template></category>
+	<category><pattern>Giới thiệu trường</pattern>
+		<template>
+		Trường Đại học Kỹ thuật - Công nghệ Cần Thơ (CTUT - Can Tho University of Technology) là trường đại học công lập chuyên đào tạo khối ngành kỹ thuật tại Thành phố Cần Thơ. Trường trực thuộc Ủy ban Nhân dân Thành phố Cần Thơ, chịu sự giám sát về giáo dục của Bộ Giáo dục và Đào tạo.
+		</template>
+	</category>
     <category><pattern>* Giới thiệu trường *</pattern><template><srai>giới thiệu trường</srai></template></category>
 	<category><pattern>Giới thiệu trường *</pattern><template><srai>giới thiệu trường</srai></template></category>
-	<category><pattern>Giới thiệu trường</pattern><template><srai>giới thiệu trường</srai></template></category>
 	<category><pattern>* Giới thiệu trường</pattern><template><srai>giới thiệu trường</srai></template></category>
 
 	<!--Phòng ban-->
