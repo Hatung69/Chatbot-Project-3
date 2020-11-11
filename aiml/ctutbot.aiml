@@ -2,28 +2,36 @@
 <aiml version="2.0">
 	<!-- Auto bot CTUT version 0.1 -->
 	
-	<!-- Chào hỏi giới thiệu -->
-	<category>
-	    <pattern>*</pattern>
-	    <template>
-			<random>
-				<li> Bạn nói gì mình không hiểu... </li>
-				<li> Thật ngại quá, mình không hiểu bạn nói gì! </li>
-				<li> Bạn hãy nói rõ hơn được không? </li>
-				<li> Có lẽ mình không hiểu câu hỏi của bạn rồi! </li>
-			</random>
-		
-		</template>
-	</category>
+	<!-- Chào hỏi giới thiệu -->	
 	
 	<category>
 	    <pattern>Xin chào</pattern>
 	    <template>
 			<random>
-				<li>Chào bạn <get name="username"/></li>
-				<li>Rất vui được làm quen với bạn <get name="username"/>!</li>
-				<li>Chào mừng bạn <get name="username"/> đến với website!</li>
-				<li>Xin chào, mình là botctut rất vui được gặp bạn <get name="username"/></li>
+				<li>
+					<condition name="username">			
+						<li value="unknown">Chào bạn</li>
+						<li>Chào <get name="username"/></li>
+					</condition>
+				</li>
+				<li>
+					<condition name="username">
+						<li value="unknown">Rất vui được làm quen với bạn!</li>
+						<li>Rất vui được làm quen với <get name="username"/>!</li>
+					</condition>
+				</li>
+				<li>
+					<condition name="username">
+						<li value="unknown">Chào mừng bạn đến với website!</li>
+						<li>Chào mừng <get name="username"/> đến với website!</li>
+					</condition>
+				</li>
+				<li>
+					<condition name="username">		
+						<li value="unknown">Xin chào, mình là Tèo rất vui được gặp bạn</li>
+						<li>Xin chào, mình là Tèo rất vui được gặp <get name="username"/></li>
+					</condition>
+				</li>
 			</random>
 		</template>
 	</category>
@@ -35,9 +43,14 @@
 	<category><pattern>Chào bạn</pattern><template><srai>Xin chào</srai></template></category>
 	<category><pattern>Chào</pattern><template><srai>Xin chào</srai></template></category>
 
+	<category><pattern>mày</pattern><template>Xin đừng thô tục như thế!!!</template></category>
+	<category><pattern>* mày</pattern><template><srai>mày</srai></template></category>
+	<category><pattern>mày *</pattern><template><srai>mày</srai></template></category>
+	<category><pattern>* mày *</pattern><template><srai>mày</srai></template></category>
+
 	<category><pattern>Hãy nói theo tôi *</pattern><template><star/>.</template></category>
 	<category><pattern>* tên là *</pattern><template>Chào <set name="username"><star index="2"/></set>.</template></category>
-	
+		
 	<!--Quỹ khuyến học-->
 
 	<category>
@@ -46,8 +59,21 @@
 	</category>	
 
 	<!-- Đăng kí học phần -->
+	<category><pattern>đăng ký</pattern><template>bạn muốn đăng ký gì nào?</template></category>
+	<category>
+		<pattern>đăng ký học phần</pattern>
+		<that>đăng ký</that>
+		<template><srai>đăng ký học phần là gì</srai></template>
+	</category>
+	<category>
+		<pattern>đăng kí học phần</pattern>
+		<that>đăng ký</that>
+		<template><srai>đăng ký học phần là gì</srai></template>
+	</category>
 	<category><pattern>đăng ký học phần là gì</pattern><template>Trước khi bắt đầu mỗi học kỳ, tùy theo khả năng và điều kiện học tập của bản thân, từng sinh viên phải đăng ký học các học phần dự định sẽ học trong học kỳ đó với phòng đào tạo của trường.<think><set name = "topic">Đăng ký học phần</set></think></template></category>
 	<category><pattern>* đăng ký học phần là gì</pattern><template><srai>đăng ký học phần là gì</srai></template></category>
+	<category><pattern>đăng ký học phần</pattern><template><srai>đăng ký học phần là gì</srai></template></category>
+	<category><pattern>đăng kí học phần</pattern><template><srai>đăng ký học phần là gì</srai></template></category>
 	<category><pattern>* đăng ký học phần là gì *</pattern><template><srai>đăng ký học phần là gì</srai></template></category>
 	<category><pattern>đăng kí học phần là gì</pattern><template><srai>đăng ký học phần là gì</srai></template></category>
 	<category><pattern>* đăng kí học phần là gì</pattern><template><srai>đăng ký học phần là gì</srai></template></category>
@@ -60,10 +86,19 @@
 	<topic name = "Đăng ký học phần">
    		<category><pattern>Đăng ký ở đâu</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>    
 		<category><pattern>Đăng kí ở đâu</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>
+		<category><pattern>ở đâu</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>
 		<category><pattern>Đăng ký ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>    
 		<category><pattern>Đăng kí ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>
 		<category><pattern>* Đăng ký ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>    
 		<category><pattern>* Đăng kí ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>
+		<category><pattern>thời gian</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
+		<category><pattern>thời gian *</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
+		<category><pattern>lúc nào</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
+		<category><pattern>lúc nào *</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
+		<category><pattern>Khóa mới</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
+		<category><pattern>Khóa mới *</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
+		<category><pattern>* Khóa mới *</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
+		<category><pattern>* Khóa mới</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
 	</topic>
 
 	<category><pattern>Thời gian đăng ký học phần</pattern><template>Thời điểm bắt đầu và kết thúc việc đăng ký học phần do Phòng Đào tạo quy định. Khoa và cố vấn học tập có trách nhiện thông báo cho sinh viên đăng ký theo hướng dẫn của trường.</template></category>
@@ -79,13 +114,27 @@
 
 	<!-- Chuẩn ngoại ngữ -->
 
+	<category><pattern>chứng chỉ</pattern><template>Ý bạn là chứng chỉ ngoại ngữ hay tin học</template></category>
+	<category>
+		<pattern>ngoại ngữ</pattern>
+		<that>chứng chỉ</that>
+		<template><srai>Chuẩn đầu ra ngoại ngữ là gì</srai></template>
+	</category>
+	<category>
+		<pattern>tin học</pattern>
+		<that>chứng chỉ</that>
+		<template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template>
+	</category>
+
 	<category><pattern>Chuẩn đầu ra ngoại ngữ là gì</pattern><template>Chuẩn đầu ra ngoại ngữ là yêu cầu tối thiểu về ngoại ngữ mà sinh viên phải đạt mới được xét tốt nghiệp</template></category>
-	<category><pattern>Chứng chỉ toeic là gì</pattern><template><srai>Chuẩn đầu ra ngoại ngữ là gì</srai></template></category>
+	<category><pattern>Chứng chỉ toeic là gì</pattern><template><srai>Là chứng chỉ về trình độ tiếng anh cần có để xét tốt nghiệp.</srai></template></category>
+	<category><pattern>chuẩn toeic</pattern><template><srai>Chứng chỉ toeic là gì</srai></template></category>
 	<category><pattern>ngoại ngữ</pattern><template><srai>Chuẩn đầu ra ngoại ngữ là gì<think><set name ="topic">ngoại ngữ</set></think></srai></template></category>
 
 	<topic name = "ngoại ngữ">
 		<category><pattern>Liệt kê các chứng chỉ</pattern><template>Bao gồm chứng chỉ về tiếng Anh (TOEIC), Tiếng Pháp (DELF), Tiếng Trung (HSK), Tiếng Nga (TRKI), Tiếng Nhật (JLPT). Để biết thêm chi tiết, hãy cho mình biết ngôn ngữ bạn quan tâm!
 		<think><set name = "topic">chọn chứng chỉ ngoại ngữ</set></think></template></category>
+		<category><pattern>liệt kê</pattern><template><srai>Liệt kê các chứng chỉ</srai></template></category>
 	</topic>
 	<topic name = "chọn chứng chỉ ngoại ngữ">
 		<category><pattern>tiếng anh</pattern><template>Tiếng anh: TOEIC - 350; TOEIC - 250 và chứng chỉ quốc gia tiếng Anh trình độ C do trường Đại học Kỹ Thuật - Công Nghệ Cần Thơ cấp; VSTEP - B1; IELTS 3.5; TOEFL ITP - 350</template></category>
@@ -100,14 +149,58 @@
 
 	<category><pattern>Chứng chỉ ứng dụng công nghệ thông tin là gì</pattern><template>Chứng chỉ ứng dụng công nghệ thông tin là chứng chỉ về tin học mà sinh viên không học ngành công nghệ thông tin cần có để xét tốt nghiệp
 	<think><set name="topic">Chứng chỉ tin học</set></think></template></category>
+	<category><pattern>tin học</pattern><template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template></category>	
+	<category><pattern>chuẩn tin học</pattern><template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template></category>	
+	<category><pattern>chuẩn CNTT</pattern><template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template></category>	
+	<category><pattern>chứng chỉ CNTT</pattern><template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template></category>	
+	<category><pattern>chứng chỉ tin học</pattern><template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template></category>	
 	<topic name = "Chứng chỉ tin học">
-		<category><pattern>Sinh viên CNTT có cần chứng chỉ này không</pattern><template>Vì bạn học chuyên ngành công nghệ thông tin rồi, nên không cần đâu!</template></category>
+		<category><pattern>Sinh viên CNTT có cần chứng chỉ này không</pattern><template>Nếu bạn học chuyên ngành công nghệ thông tin rồi, thì không cần đâu!</template></category>
+		<category><pattern>Sinh viên CNTT có cần chứng chỉ này không</pattern><template></template></category>
 		<category><pattern>Quy định này áp dụng từ khi nào</pattern><template>Theo mình biết Sinh viên nhập học từ năm 2016 trở về sau cần chứng chỉ này để xét tốt nghiệp</template></category>
+		<category><pattern>áp dụng</pattern><template><srai>Quy định này áp dụng từ khi nào</srai></template></category>
+		<category><pattern>* áp dụng</pattern><template><srai>Quy định này áp dụng từ khi nào</srai></template></category>
+		<category><pattern>* áp dụng *</pattern><template><srai>Quy định này áp dụng từ khi nào</srai></template></category>
+		<category><pattern>áp dụng *</pattern><template><srai>Quy định này áp dụng từ khi nào</srai></template></category>
 	</topic>
 	
 	<!--Hỗ trợ học phí-->
 	
+	<category><pattern>khó khăn</pattern><template>Bạn cần hỗ trợ học phí chăng?</template></category>
+	<category><pattern>khó khăn *</pattern><template><srai>khó khăn</srai></template></category>
+	<category><pattern>* khó khăn *</pattern><template><srai>khó khăn</srai></template></category>
+	<category><pattern>* khó khăn</pattern><template><srai>khó khăn</srai></template></category>
+
+	<category>
+		<pattern>Đúng</pattern>
+		<that>khó khăn</that>
+		<template><srai>Hỗ trợ học phí</srai></template>
+	</category>
+	<category>
+		<pattern>Rất cần</pattern>
+		<that>khó khăn</that>
+		<template><srai>Hỗ trợ học phí</srai></template>
+	</category>
+	<category>
+		<pattern>* cần</pattern>
+		<that>khó khăn</that>
+		<template><srai>Hỗ trợ học phí</srai></template>
+	</category>
+	<category>
+		<pattern>* rất cần</pattern>
+		<that>khó khăn</that>
+		<template><srai>Hỗ trợ học phí</srai></template>
+	</category>
+	<category>
+		<pattern>không</pattern>
+		<that>khó khăn</that>
+		<template>NA</template>
+	</category>
+
 	<category><pattern>Hỗ trợ học phí</pattern><template>Hỗ trợ học phí là việc Trường hỗ trợ học phí cho sinh viên trong các trường học đặc biệt<think><set name = "topic">Hỗ trợ học phí</set></think></template></category>
+	<category><pattern>* Hỗ trợ học phí</pattern><template><srai>Hỗ trợ học phí</srai></template></category>
+	<category><pattern>* Hỗ trợ học phí *</pattern><template><srai>Hỗ trợ học phí</srai></template></category>
+	<category><pattern>Hỗ trợ học phí *</pattern><template><srai>Hỗ trợ học phí</srai></template></category>
 	<topic name = "Hỗ trợ học phí">
 		<category><pattern>Đối tượng được hỗ trợ học phí</pattern><template>Các đối tượng được hỗ trợ học phí là: sinh viên là người dân tộc thiểu số thuộc hộ nghèo, hộ cận nghèo theo quy định của nhà nước.</template></category>
 		<category><pattern>Ai được hỗ trợ học phí</pattern><template><srai>Đối tượng được hỗ trợ học phí</srai></template></category>
@@ -146,6 +239,28 @@
 	<category><pattern>Thời gian cấp học bổng</pattern><template>Học bổng khuyến khích học tập được cấp theo từng học kỳ (05 tháng/ 1 học kỳ), mỗi năm được cấp 02 kỳ. Nhà trường sẽ công bố kết quả xét học bổng khuyến khích học tập vào tháng 3 và tháng 9 hàng năm</template></category>
 	<category><pattern>Phương thức nhận học bổng</pattern><template>Sinh viên cung cấp tài khoản ngân hàng cho phòng Tài chính - kế toán, tiền học bổng sẽ được chuyển cho sinh viên trong vòng 10 ngày kể từ ngày nhận đủ hồ sơ.</template></category>
 	<category><pattern>Giá trị học bổng</pattern><template><think><set name = "topic">Giá trị học bổng</set></think>Hãy cho mình biết loại học bổng.</template></category>
+
+	<category><pattern>loại học bổng</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
+	<category><pattern>* loại học bổng</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
+	<category><pattern>* loại học bổng *</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
+	<category><pattern>loại học bổng *</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
+	<category><pattern>* GIÁ TRỊ HỌC BỔNG</pattern><template><srai>Giá trị học bổng</srai></template></category>
+	<category><pattern>* GIÁ TRỊ HỌC BỔNG *</pattern><template><srai>Giá trị học bổng</srai></template></category>
+	<category><pattern>GIÁ TRỊ HỌC BỔNG *</pattern><template><srai>Giá trị học bổng</srai></template></category>
+
+	<category>
+		<pattern>học bổng</pattern>
+		<template>
+			<random>
+				<li><srai>Đối tượng được cấp học bổng</srai></li>
+				<li><srai>Những học kỳ được xét học bổng</srai></li>
+				<li><srai>Tiêu chuẩn cấp học bổng</srai></li>
+				<li><srai>Xếp loại học bổng khuyến khích học tập</srai></li>
+				<li><srai>Thời gian cấp học bổng</srai></li>
+				<li><srai>Phương thức nhận học bổng</srai></li>
+			</random>
+		</template>
+	</category>
 
 	<topic name = "Học bổng">
 		<category>
@@ -189,7 +304,9 @@
 
 	<!--Chương trình đào tạo-->
 	<category><pattern>Đào tạo</pattern><template><think><set name="topic">đào tạo</set></think>Bạn muốn biết gì về chương trình đào tạo nào?</template></category>
-	<category><pattern>* đào tạo</pattern><template><srai>đào tạo</srai></template></category>	
+	<category><pattern>* đào tạo</pattern><template><srai>đào tạo</srai></template></category>
+	<category><pattern>* đào tạo *</pattern><template><srai>đào tạo</srai></template></category>
+	<category><pattern>đào tạo *</pattern><template><srai>đào tạo</srai></template></category>
 	<category><pattern>Thời gian đào tạo trình độ đại học là bao lâu</pattern><template>Đào tạo trình độ đại học từ 4 năm đến 8 năm, số tín chỉ không dưới 130 tín chỉ</template></category>
 	<category><pattern>Học phần là gì</pattern><template>Là khối lượng kiến thức tương đối trọn vẹn, thuận tiện cho sinh viên tích lũy trong quá trình học tập, phần lớn học phần có khối lượng từ 2 đến 4 tín chỉ, nội dung được bố trí giảng dạy trọn vẹn và phân bố đều trong một học kỳ.</template></category>
 	<category><pattern>Có mấy loại học phần</pattern><template>Có hai loại học phần: học phần bắt buộc và học phần tự chọn</template></category>
@@ -216,21 +333,44 @@
 	
 	<topic name = "đào tạo">
 		<category><pattern>Thời gian đào tạo</pattern><template><srai>Thời gian đào tạo trình độ đại học là bao lâu</srai></template></category>
+		<category><pattern>Thời gian</pattern><template><srai>Thời gian đào tạo trình độ đại học là bao lâu</srai></template></category>
 		<category><pattern>Học phần bắt buộc</pattern><template><srai>Học phần bắt buộc là gì</srai></template></category>
+		<category><pattern>* Học phần bắt buộc</pattern><template><srai>Học phần bắt buộc là gì</srai></template></category>
 		<category><pattern>Học phần tự chọn</pattern><template><srai>Học phần tự chọn là gì</srai></template></category>
+		<category><pattern>* Học phần tự chọn</pattern><template><srai>Học phần tự chọn là gì</srai></template></category>
 		<category><pattern>Học phần tiên quyết</pattern><template><srai>Học phần tiên quyết là gì</srai></template></category>
+		<category><pattern>* Học phần tiên quyết</pattern><template><srai>Học phần tiên quyết là gì</srai></template></category>
 		<category><pattern>Học phần học trước</pattern><template><srai>Học phần học trước là gì</srai></template></category>
+		<category><pattern>* Học phần học trước</pattern><template><srai>Học phần học trước là gì</srai></template></category>
 		<category><pattern>Học phần song hành</pattern><template><srai>Học phần song hành là gì</srai></template></category>
+		<category><pattern>* Học phần song hành</pattern><template><srai>Học phần song hành là gì</srai></template></category>
 		<category><pattern>Học phần tương đương</pattern><template><srai>Học phần tương đương, học phần thay thế là gì</srai></template></category>
+		<category><pattern>* Học phần tương đương</pattern><template><srai>Học phần tương đương, học phần thay thế là gì</srai></template></category>
 		<category><pattern>học phần thay thế</pattern><template><srai>Học phần tương đương, học phần thay thế là gì</srai></template></category>
+		<category><pattern>* học phần thay thế</pattern><template><srai>Học phần tương đương, học phần thay thế là gì</srai></template></category>
 		<category><pattern>Học phần điều kiện</pattern><template><srai>Học phần điều kiện là gì</srai></template></category>
+		<category><pattern>* Học phần điều kiện</pattern><template><srai>Học phần điều kiện là gì</srai></template></category>
 	</topic>
 	
 	<!--Rút học phần-->
-	<category><pattern>Rút học phần là gì</pattern><template>Là việc rút bớt học phần trong khối lượng học tập đã đăng ký đối với sinh viên đã đóng học phí.</template></category>
+	<category><pattern>Rút học phần là gì</pattern><template>Rút học phần là việc rút bớt học phần trong khối lượng học tập đã đăng ký đối với sinh viên đã đóng học phí.</template></category>
 	<category><pattern>Thời gian được phép rút học phần</pattern><template>Chậm nhất trước 03 ngày khi bắt đầu học kỳ: trường sẽ chuyển học phí học phần sang học kỳ kế tiếp.<br/>Ngoài thời gian quy định, học phần vẫn được giữ nguyên trong hệ thống và nếu sinh viên không lên lớp học, coi như tự ý bỏ học và phải nhận điểm F.<br/>Chậm nhất là tuần lễ thứ 8 của học kỳ chính và tuần lễ thứ 2 của học kỳ phụ: nếu nhận thấy việc học khó khăn có thể dẫn đến kết quả kém, sinh viên có thể rút bớt học phần đã đăng ký nhưng không được trả lại học phí.</template></category>
 	<category><pattern>Điều kiện rút bớt các học phần đã đăng ký</pattern><template>Sinh viên phải viết đơn gửi Phòng đào tạo của Trường. Được cán bộ giảng dạy phụ trách lớp học phần ký duyệt và cố vấn học tập chấp thuận. Đồng thời phải đảm bảo số tín chỉ tối thiểu của học kỳ.</template></category>
 	
+	<category><pattern>* rút học phần</pattern><template><srai>Rút học phần là gì</srai></template></category>
+	<category><pattern>* rút học phần *</pattern><template><srai>Rút học phần là gì</srai></template></category>
+	<category><pattern>rút học phần *</pattern><template><srai>Rút học phần là gì</srai></template></category>
+	<category><pattern>ĐIỀU KIỆN * RÚT HỌC PHẦN</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>ĐIỀU KIỆN * RÚT HỌC PHẦN *</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>* ĐIỀU KIỆN * RÚT HỌC PHẦN *</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>* ĐIỀU KIỆN * RÚT HỌC PHẦN</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>* ĐIỀU KIỆN RÚT HỌC PHẦN</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>* ĐIỀU KIỆN RÚT HỌC PHẦN *</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>ĐIỀU KIỆN RÚT HỌC PHẦN *</pattern><template><srai>Điều kiện rút bớt các học phần đã đăng ký</srai></template></category>
+	<category><pattern>THỜI GIAN RÚT HỌC PHẦN</pattern><template><srai>Thời gian được phép rút học phần</srai></template></category>
+	<category><pattern>THỜI GIAN * RÚT HỌC PHẦN</pattern><template><srai>Thời gian được phép rút học phần</srai></template></category>
+	<category><pattern>* THỜI GIAN * RÚT HỌC PHẦN *</pattern><template><srai>Thời gian được phép rút học phần</srai></template></category>
+
 	<!--Đăng ký học lại-->
 	<category><pattern>Trường hợp phải đăng kí học lại</pattern><template>Sinh viên có học phần bắt buộc bị điểm F phải đăng ký học lại học phần đó ở một trong các học kỳ tiếp theo cho đến khi đạt điểm A+, A, B+, B, C+, C, D+ hoặc D.<br/>Sinh viên có học phần tự chọn bị điểm F có thể đăng ký học lại học phần đó hoặc đổi sang học phần tự chọn tương đương khác.</template></category>
 	<category><pattern>Cải thiện điểm</pattern><template>Các học phần đã tích lũy ở mức điểm D, D+, C, C+, B, B+, sinh viên có thể đăng ký học lại để cải thiện kết quả. Điểm của học phần được tính vào điểm trung bình chung tích lũy sẽ là điểm cao nhất trong các lần học. Điểm của các lần học sẽ được thể hiện trên bảng điểm toàn khóa.</template></category>
@@ -301,11 +441,21 @@
 
 	<category><pattern>Đình chỉ học tập</pattern><template>Các trường hợp bị định chỉ học tập trong 1 học kỳ: Bị kỷ luật ở mức đình chỉ học tập; Có điểm rèn luyện yếu, kém trong 2 học kỳ liên tiếp.<br/>Đình chỉ học tập 1 năm trong trường hợp bị kỷ luật ở mức đình chỉ học tập.</template></category>
 	<category><pattern>Đình chỉ</pattern><template><srai>Đình chỉ học tập</srai></template></category>
+	<category><pattern>* Đình chỉ</pattern><template><srai>Đình chỉ học tập</srai></template></category>
+	<category><pattern>* Đình chỉ *</pattern><template><srai>Đình chỉ học tập</srai></template></category>
+	<category><pattern>Đình chỉ *</pattern><template><srai>Đình chỉ học tập</srai></template></category>
 	
 	<!--Buộc thôi học-->
 
 	<category><pattern>Buộc thôi học</pattern><template>Các trường hợp bị buộc thôi học:<br/>a. Bị kỷ luật ở mức buộc thôi học.<br/>b. Đã bị cảnh báo học vụ và học kỳ chính kế tiếp có điểm trung bình chung học kỳ dưới 1.00. Những trường hợp đặc biết sẽ do Hiệu trưởng quyết định.<br/>c. Nghỉ học tạm thời quá thời hạn cho phép.<br/>d. Sinh viên không đăng ký học trong 2 học kỳ chính liên tiếp (trừ trường hợp được sự cho phép của Hiệu trưởng).<br/>e. Không đóng học phí 2 học kỳ liên tiếp.<br/>f. Có điểm rèn luyện yếu, kém 2 học kỳ liên tiếp lần thứ hai.<br/>g. Đã hết thời gian tối đa được phép học.</template></category>
-	<category><pattern>Bắt buộc thôi học</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>đuổi học</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>* đuổi học</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>* đuổi học *</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>đuổi học *</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>thôi học</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>* thôi học</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>* thôi học *</pattern><template><srai>Buộc thôi học</srai></template></category>
+	<category><pattern>thôi học *</pattern><template><srai>Buộc thôi học</srai></template></category>
 	
 	<!--Học song ngành-->	
 	
@@ -316,7 +466,13 @@
 	
 	<category><pattern>Học song ngành</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
 	<category><pattern>Chứng chỉ hai</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
+	<category><pattern>* Chứng chỉ hai</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
+	<category><pattern>* Chứng chỉ hai *</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
+	<category><pattern>Chứng chỉ hai *</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
 	<category><pattern>Chứng chỉ 2</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
+	<category><pattern>*Chứng chỉ 2</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
+	<category><pattern>*Chứng chỉ 2 *</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
+	<category><pattern>Chứng chỉ 2 *</pattern><template><srai>Học cùng lúc hai chương trình</srai></template></category>
 
 	<topic name = "song ngành">
 		<category><pattern>điều kiện học</pattern><template><srai>Điều kiện học cùng lúc hai chương trình</srai></template></category>
@@ -433,36 +589,57 @@
 	    <pattern>phòng đào tạo</pattern>
 	    <template>Bạn có thể truy cập vào Website: http://pdaotao.ctuet.edu.vn. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* phòng đào tạo</pattern><template><srai>phòng đào tạo</srai></template></category>
+	<category><pattern>* phòng đào tạo *</pattern><template><srai>phòng đào tạo</srai></template></category>
+	<category><pattern>phòng đào tạo *</pattern><template><srai>phòng đào tạo</srai></template></category>
 
 	<category>
 	    <pattern>Phòng công tác Chính trị và Quản lý sinh viên</pattern>
 	    <template>Bạn có thể truy cập vào Website: http://phongctct.ctuet.edu.vn/. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* Phòng công tác Chính trị và Quản lý sinh viên</pattern><template><srai>Phòng công tác Chính trị và Quản lý sinh viên</srai></template></category>
+	<category><pattern>* Phòng công tác Chính trị và Quản lý sinh viên *</pattern><template><srai>Phòng công tác Chính trị và Quản lý sinh viên</srai></template></category>
+	<category><pattern>Phòng công tác Chính trị và Quản lý sinh viên *</pattern><template><srai>Phòng công tác Chính trị và Quản lý sinh viên</srai></template></category>
 
 	<category>
 	    <pattern>phòng nghiên cứu khoa học</pattern>
 	    <template>Bạn có thể truy cập vào Website: http://phongnckh.ctuet.edu.vn/. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* phòng nghiên cứu khoa học</pattern><template><srai>phòng nghiên cứu khoa học</srai></template></category>
+	<category><pattern>* phòng nghiên cứu khoa học *</pattern><template><srai>phòng nghiên cứu khoa học</srai></template></category>
+	<category><pattern>phòng nghiên cứu khoa học *</pattern><template><srai>phòng nghiên cứu khoa học</srai></template></category>
 
 	<category>
 	    <pattern>phòng đảm bảm chất lượng và khảo thí</pattern>
 	    <template>Bạn có thể truy cập vào Website: http://phongdbcl.ctuet.edu.vn/. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* phòng đảm bảm chất lượng và khảo thí</pattern><template><srai>phòng đảm bảm chất lượng và khảo thí</srai></template></category>
+	<category><pattern>* phòng đảm bảm chất lượng và khảo thí *</pattern><template><srai>phòng đảm bảm chất lượng và khảo thí</srai></template></category>
+	<category><pattern>phòng đảm bảm chất lượng và khảo thí *</pattern><template><srai>phòng đảm bảm chất lượng và khảo thí</srai></template></category>
 	
 	<category>
 	    <pattern>phòng tổ chức hành chính</pattern>
 	    <template>Bạn có thể truy cập vào Website: https://ptchc.ctuet.edu.vn/. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* phòng tổ chức hành chính</pattern><template><srai>phòng tổ chức hành chính</srai></template></category>
+	<category><pattern>* phòng tổ chức hành chính *</pattern><template><srai>phòng tổ chức hành chính</srai></template></category>
+	<category><pattern>phòng tổ chức hành chính *</pattern><template><srai>phòng tổ chức hành chính</srai></template></category>
 
 	<category>
 	    <pattern>phòng quản trị thiết bị</pattern>
 	    <template>Bạn có thể truy cập vào Website: http://phongqttb.ctuet.edu.vn/. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* phòng quản trị thiết bị</pattern><template><srai>phòng quản trị thiết bị</srai></template></category>
+	<category><pattern>* phòng quản trị thiết bị *</pattern><template><srai>phòng quản trị thiết bị</srai></template></category>
+	<category><pattern>phòng quản trị thiết bị *</pattern><template><srai>phòng quản trị thiết bị</srai></template></category>
 	
 	<category>
 	    <pattern>phòng tài chính kế toán</pattern>
 	    <template>Bạn có thể truy cập vào Website: https://phongtckt.ctuet.edu.vn/. Để tìm hiều thêm thông tin!</template>
 	</category>
+	<category><pattern>* phòng tài chính kế toán</pattern><template><srai>phòng tài chính kế toán</srai></template></category>
+	<category><pattern>* phòng tài chính kế toán *</pattern><template><srai>phòng tài chính kế toán</srai></template></category>
+	<category><pattern>phòng tài chính kế toán *</pattern><template><srai>phòng tài chính kế toán</srai></template></category>
 
 	<category>
 	    <pattern>trường có bao nhiêu ngành học</pattern>
@@ -484,6 +661,10 @@
 		<br/>15.Công nghệ thực phẩm
 		<br/>16.Công nghệ sinh học</template>
 	</category>
+
+	<category><pattern>* TRƯỜNG CÓ BAO NHIÊU NGÀNH HỌC</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
+	<category><pattern>* TRƯỜNG CÓ BAO NHIÊU NGÀNH HỌC *</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
+	<category><pattern>TRƯỜNG CÓ BAO NHIÊU NGÀNH HỌC *</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
 
 	<!--Khoa-->
 
@@ -534,15 +715,4 @@
 	<category><pattern>Các trung tâm tại trường</pattern><template><srai>Trường có bao nhiêu trung tâm</srai></template></category>
 	<category><pattern></pattern><template><srai></srai></template></category>
 
-
-
-	<category><pattern></pattern><template></template></category>	
-	<category><pattern></pattern><template></template></category>	
-
-	<category><pattern></pattern><template><srai></srai></template></category>
-	<category><pattern></pattern><template><srai></srai></template></category>
-	<category><pattern></pattern><template><srai></srai></template></category>
-	<category><pattern></pattern><template><srai></srai></template></category>
-
-	
 </aiml>
