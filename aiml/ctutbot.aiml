@@ -20,10 +20,10 @@
 	    <pattern>Xin chào</pattern>
 	    <template>
 			<random>
-				<li>Chào bạn</li>
-				<li>Rất vui được làm quen với bạn!</li>
-				<li>Chào mừng bạn đến với website!</li>
-				<li>Xin chào, mình là botctut rất vui được gặp bạn.</li>
+				<li>Chào bạn <get name="username"/></li>
+				<li>Rất vui được làm quen với bạn <get name="username"/>!</li>
+				<li>Chào mừng bạn <get name="username"/> đến với website!</li>
+				<li>Xin chào, mình là botctut rất vui được gặp bạn <get name="username"/></li>
 			</random>
 		</template>
 	</category>
@@ -33,9 +33,10 @@
 	<category><pattern>chào *</pattern><template><srai>Xin chào</srai></template></category>
 	<category><pattern>* chào</pattern><template><srai>Xin chào</srai></template></category>
 	<category><pattern>Chào bạn</pattern><template><srai>Xin chào</srai></template></category>
+	<category><pattern>Chào</pattern><template><srai>Xin chào</srai></template></category>
 
 	<category><pattern>Hãy nói theo tôi *</pattern><template><star/>.</template></category>
-	<category><pattern>* tên là *</pattern><template>Chào <star index="2"/>.</template></category>
+	<category><pattern>* tên là *</pattern><template>Chào <set name="username"><star index="2"/></set>.</template></category>
 	
 	<!--Quỹ khuyến học-->
 
@@ -188,6 +189,7 @@
 
 	<!--Chương trình đào tạo-->
 	<category><pattern>Đào tạo</pattern><template><think><set name="topic">đào tạo</set></think>Bạn muốn biết gì về chương trình đào tạo nào?</template></category>
+	<category><pattern>* đào tạo</pattern><template><srai>đào tạo</srai></template></category>	
 	<category><pattern>Thời gian đào tạo trình độ đại học là bao lâu</pattern><template>Đào tạo trình độ đại học từ 4 năm đến 8 năm, số tín chỉ không dưới 130 tín chỉ</template></category>
 	<category><pattern>Học phần là gì</pattern><template>Là khối lượng kiến thức tương đối trọn vẹn, thuận tiện cho sinh viên tích lũy trong quá trình học tập, phần lớn học phần có khối lượng từ 2 đến 4 tín chỉ, nội dung được bố trí giảng dạy trọn vẹn và phân bố đều trong một học kỳ.</template></category>
 	<category><pattern>Có mấy loại học phần</pattern><template>Có hai loại học phần: học phần bắt buộc và học phần tự chọn</template></category>
