@@ -4,7 +4,7 @@
     <category><pattern>wow</pattern>
         <template>Tại sao bạn lại wow</template>
     </category>
-    <category><pattern>cảm ơn</pattern>
+    <category><pattern>^ cảm ơn ^</pattern>
         <template>
             <random>
                 <li>Không có gì đâu nè.</li>

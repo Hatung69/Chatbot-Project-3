@@ -6,12 +6,12 @@
 	    <template>
             <random>
                 <li>Ý bạn là phòng đào tạo?</li>
-                <li>Bạn đang cần tiền?</li>
-                
+                <li>Bạn đang cần tiền?</li>                
                 <li>Bạn muốn biết về chủ đề gì nào?</li>
-                <li>Bạn muốn đăng ký học phần sao?</li>
+                <li>Bạn muốn biết về đăng ký học phần sao?</li>
                 <li>Bạn đang tò mò về quỹ khuyến học?</li>
                 <li>Bạn muốn biết về chuẩn ngoại ngữ phải không?</li>
+
                 <li>Có phải bạn đang cần tìm hiểu về chứng chỉ tin học?</li>
                 <li>Bạn muốn tìn hiểu về vấn đề hỗ trợ học phí sao?</li>
                 <li>Mình đoán là bạn muốn biết về vấn đề đóng học phí!</li>
@@ -69,6 +69,45 @@
         <that>Bạn đang cần tiền</that>
         <template><srai>NA</srai></template>
     </category>	
+
+    <!--Bạn muốn biết về đăng ký học phần sao-->
+
+    <category>
+        <pattern>Đúng</pattern>
+        <that>Bạn muốn biết về đăng ký học phần sao</that>
+        <template><srai>đăng ký học phần là gì</srai></template>
+    </category>	
+    <category>
+        <pattern>Không</pattern>
+        <that>Bạn muốn biết về đăng ký học phần sao</that>
+        <template><srai>NA</srai></template>
+    </category>
+
+    <!--Bạn đang tò mò về quỹ khuyến học-->
+
+    <category>
+        <pattern>Đúng</pattern>
+        <that>Bạn đang tò mò về quỹ khuyến học</that>
+        <template><srai>Hội phí quỹ khuyến học</srai></template>
+    </category>	
+    <category>
+        <pattern>Không</pattern>
+        <that>Bạn đang tò mò về quỹ khuyến học</that>
+        <template><srai>NA</srai></template>
+    </category>
+
+    <!--Bạn muốn biết về chuẩn ngoại ngữ phải không-->
+
+    <category>
+        <pattern>Đúng</pattern>
+        <that>Bạn muốn biết về chuẩn ngoại ngữ phải không</that>
+        <template><srai>Chuẩn đầu ra ngoại ngữ là gì</srai></template>
+    </category>	
+    <category>
+        <pattern>Không</pattern>
+        <that>Bạn muốn biết về chuẩn ngoại ngữ phải không</that>
+        <template><srai>NA</srai></template>
+    </category>
 
     
     <category><pattern></pattern><template></template></category>	

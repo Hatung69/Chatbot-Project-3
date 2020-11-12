@@ -91,10 +91,8 @@
 		<category><pattern>Đăng kí ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>
 		<category><pattern>* Đăng ký ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>    
 		<category><pattern>* Đăng kí ở đâu *</pattern><template><srai>đăng ký học phần ở đâu</srai></template></category>
-		<category><pattern>thời gian</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
-		<category><pattern>thời gian *</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
-		<category><pattern>lúc nào</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
-		<category><pattern>lúc nào *</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
+		<category><pattern>^ thời gian ^</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
+		<category><pattern>^ lúc nào ^</pattern><template><srai>Thời gian đăng ký học phần</srai></template></category>
 		<category><pattern>Khóa mới</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
 		<category><pattern>Khóa mới *</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
 		<category><pattern>* Khóa mới *</pattern><template><srai>Khóa mới nhập học có cần đăng ký không</srai></template></category>
@@ -116,12 +114,12 @@
 
 	<category><pattern>chứng chỉ</pattern><template>Ý bạn là chứng chỉ ngoại ngữ hay tin học</template></category>
 	<category>
-		<pattern>ngoại ngữ</pattern>
+		<pattern>^ ngoại ngữ ^</pattern>
 		<that>chứng chỉ</that>
 		<template><srai>Chuẩn đầu ra ngoại ngữ là gì</srai></template>
 	</category>
 	<category>
-		<pattern>tin học</pattern>
+		<pattern>^ tin học ^</pattern>
 		<that>chứng chỉ</that>
 		<template><srai>Chứng chỉ ứng dụng công nghệ thông tin là gì</srai></template>
 	</category>
@@ -568,7 +566,7 @@
 	<category><pattern>Vi phạm quy chế</pattern><template>Trong khi dự kiểm tra thường xuyên, chuẩn bị tiểu luận, bài tập lớn, thi giữa học phần, thi kết thúc học phần, chuẩn bị tiểu luận tốt nghiệp, luận văn tốt nghiệp, nếu vi phạm quy chế, sinh viên sẽ bị xử lý kỷ luật với từng học phần đã vi phạm.</template></category>
 	<category><pattern>Đi thi hộ</pattern><template>Sinh viên đi thi hộ hoặc nhờ người khác thi hộ, đều bị kỷ luật ở mức đình chỉ học tập một năm đối với trường hợp vi phạm lần thứ nhất và buộc thôi học đối với trường hợp vi phạm lần thứ hai.</template></category>
 	
-	<category><pattern>Thi hộ</pattern><template><srai>Đi thi hộ</srai></template></category>
+	<category><pattern>^ Thi hộ ^</pattern><template><srai>Đi thi hộ</srai></template></category>
 	<category><pattern>Vi phạm</pattern><template><srai>Vi phạm quy chế</srai></template></category>
 	<category><pattern>Vi phạm qui chế</pattern><template><srai>Vi phạm quy chế</srai></template></category>
 
@@ -694,10 +692,10 @@
 		<category><pattern>liệt kê</pattern><template><srai>Liệt kê các khoa</srai></template></category>
 	</topic>
 
-	<category><pattern>Công nghệ thực phẩm</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
-	<category><pattern>Công nghệ sinh học</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
-	<category><pattern>CN thực phẩm</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
-	<category><pattern>CN sinh học</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
+	<category><pattern>^ Công nghệ thực phẩm ^</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
+	<category><pattern>^ Công nghệ sinh học ^</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
+	<category><pattern>^ CN thực phẩm ^</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
+	<category><pattern>^ CN sinh học ^</pattern><template><srai>CN thực phẩm - CN sinh học</srai></template></category>
 
 	<!--Trung tâm-->
 
@@ -713,6 +711,6 @@
 	<category><pattern>Trung tâm Kỹ thuật năng lượng - Chuyển giao công nghệ</pattern><template>Bạn có thể truy cập vào website http://trungtamktnl.ctuet.edu.vn/ để biết thêm thông tin chi tiết!</template></category>	
 
 	<category><pattern>Các trung tâm tại trường</pattern><template><srai>Trường có bao nhiêu trung tâm</srai></template></category>
-	<category><pattern></pattern><template><srai></srai></template></category>
+	<category><pattern>^ trung tâm ^ trường ^</pattern><template><srai>Trường có bao nhiêu trung tâm</srai></template></category>
 
 </aiml>
