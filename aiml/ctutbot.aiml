@@ -5,7 +5,7 @@
 	<!-- Chào hỏi giới thiệu -->	
 	
 	<category>
-	    <pattern>Xin chào</pattern>
+	    <pattern>^ Xin chào ^</pattern>
 	    <template>
 			<random>
 				<li>
@@ -36,17 +36,7 @@
 		</template>
 	</category>
 	
-	<category><pattern>Xin chào *</pattern><template><srai>Xin chào</srai></template></category>
-	<category><pattern>* chào *</pattern><template><srai>Xin chào</srai></template></category>
-	<category><pattern>chào *</pattern><template><srai>Xin chào</srai></template></category>
-	<category><pattern>* chào</pattern><template><srai>Xin chào</srai></template></category>
-	<category><pattern>Chào bạn</pattern><template><srai>Xin chào</srai></template></category>
-	<category><pattern>Chào</pattern><template><srai>Xin chào</srai></template></category>
-
-	<category><pattern>mày</pattern><template>Xin đừng thô tục như thế!!!</template></category>
-	<category><pattern>* mày</pattern><template><srai>mày</srai></template></category>
-	<category><pattern>mày *</pattern><template><srai>mày</srai></template></category>
-	<category><pattern>* mày *</pattern><template><srai>mày</srai></template></category>
+	<category><pattern>^ CHÀO ^</pattern><template><srai>^ Xin chào ^</srai></template></category>
 
 	<category><pattern>Hãy nói theo tôi *</pattern><template><star/>.</template></category>
 	<category><pattern>* tên là *</pattern><template>Chào <set name="username"><star index="2"/></set>.</template></category>
@@ -212,20 +202,34 @@
 	</topic>	
 
 	<!--Đóng học phí-->
+
+	<category>
+		<pattern>^ ĐÓNG HỌC PHÍ ^</pattern>
+		<template>Bạn muốn biết gì về <set name="topic">đóng học phí</set>?
+		<br/>Cú pháp
+		<br/>Thời gian
+		<br/>Phương thức
+		<br/>Số tài khoản</template>
+	</category>	
 	
-	<category><pattern>Số tài khoản của trường là gì</pattern><template>Tên tài khoản: Trường Đại học Kỹ thuật - Công nghệ Cần Thơ <br/>Số tài khoản: 0111000315359 <br/>Ngân hàng Ngoại Thương Cần Thơ</template></category>
-	<category><pattern>Cú pháp chuyển khoản</pattern><template>Ví dụ: Nguyễn Văn A - MSSV:190018x - HK1 (2020 - 2021)</template></category>
-	<category><pattern>Đóng học phí online</pattern><template>Bạn có thể đóng học phí online bằng cách truy cập website của Phòng đào tạo và vào mục công nợ sinh viên</template></category>
-	<category><pattern>Thời gian đóng học phí</pattern><template><think><set name="topic">Đóng học phí</set></think>Đối với khóa mới nhập học: theo giấy báo nhập học. Đối với khóa cũ: chậm nhất trước 3 ngày khi bắt đầu học kỳ. Trường hợp đăng kí muộn, việc đóng học phí phải thực hiện trong 2 tuần đầu của học kỳ chính hoặc trong tuần đầu của học kỳ phụ.</template></category>
-	<category><pattern>Không đóng học phí sẽ ra sao</pattern><template>Những học phần sinh viên đã đăng kí học phần mà không đóng học phí, sau thời gian hết hạn nộp học phí, hệ thống sẽ xóa tên sinh viên ra khỏi lớp học phần, xem như sinh viên tự ý bỏ học.</template></category>
+	<category><pattern>^ Số tài khoản của trường là gì ^</pattern><template>Tên tài khoản: Trường Đại học Kỹ thuật - Công nghệ Cần Thơ <br/>Số tài khoản: 0111000315359 <br/>Ngân hàng Ngoại Thương Cần Thơ</template></category>
+	<category><pattern>^ Cú pháp chuyển khoản ^</pattern><template>Ví dụ: Nguyễn Văn A - MSSV:190018x - HK1 (2020 - 2021)</template></category>
+	<category><pattern>^ Đóng học phí online ^</pattern><template>Bạn có thể đóng học phí online bằng cách truy cập website của Phòng đào tạo và vào mục công nợ sinh viên</template></category>
+	<category><pattern>^ Thời gian đóng học phí ^</pattern><template><think><set name="topic">đóng học phí</set></think>Đối với khóa mới nhập học: theo giấy báo nhập học. Đối với khóa cũ: chậm nhất trước 3 ngày khi bắt đầu học kỳ. Trường hợp đăng kí muộn, việc đóng học phí phải thực hiện trong 2 tuần đầu của học kỳ chính hoặc trong tuần đầu của học kỳ phụ.</template></category>
+	<category><pattern>^ Không đóng học phí sẽ ra sao ^</pattern><template>Những học phần sinh viên đã đăng kí học phần mà không đóng học phí, sau thời gian hết hạn nộp học phí, hệ thống sẽ xóa tên sinh viên ra khỏi lớp học phần, xem như sinh viên tự ý bỏ học.</template></category>
 
 	<category><pattern>Trường có hỗ trợ đóng học phí online không</pattern><template><srai>Đóng học phí online</srai></template></category>
 	<category><pattern>Số tài khoản</pattern><template><srai>Số tài khoản của trường là gì</srai></template></category>
 
-	<topic name = "Đóng học phí">
+	<topic name = "đóng học phí">
 		<category><pattern>Thời gian</pattern><template><srai>Thời gian đóng học phí</srai></template></category>
 		<category><pattern>Online</pattern><template><srai>Đóng học phí online</srai></template></category>
 		<category><pattern>Cú pháp</pattern><template><srai>Cú pháp chuyển khoản</srai></template></category>
+		<category><pattern>^ KHÔNG ĐÓNG ^</pattern><template><srai>^ Không đóng học phí sẽ ra sao ^</srai></template></category>
+		<category><pattern>Cú pháp</pattern><template><srai>^ Cú pháp chuyển khoản ^</srai></template></category>
+		<category><pattern>Thời gian</pattern><template><srai>^ Thời gian đóng học phí ^</srai></template></category>
+		<category><pattern>Phương thức</pattern><template><srai>^ Đóng học phí online ^</srai></template></category>
+		<category><pattern>Số tài khoản</pattern><template><srai>^ Số tài khoản của trường là gì ^</srai></template></category>		
 	</topic>
 
 	<!--Học bổng-->
@@ -242,9 +246,7 @@
 	<category><pattern>* loại học bổng</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
 	<category><pattern>* loại học bổng *</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
 	<category><pattern>loại học bổng *</pattern><template><srai>Xếp loại học bổng khuyến khích học tập</srai></template></category>
-	<category><pattern>* GIÁ TRỊ HỌC BỔNG</pattern><template><srai>Giá trị học bổng</srai></template></category>
-	<category><pattern>* GIÁ TRỊ HỌC BỔNG *</pattern><template><srai>Giá trị học bổng</srai></template></category>
-	<category><pattern>GIÁ TRỊ HỌC BỔNG *</pattern><template><srai>Giá trị học bổng</srai></template></category>
+	<category><pattern>^ GIÁ TRỊ HỌC BỔNG ^</pattern><template><srai>Giá trị học bổng</srai></template></category>
 
 	<category>
 		<pattern>học bổng</pattern>
@@ -375,10 +377,7 @@
 	<category><pattern>Lựa chọn điểm xét tốt nghiệp</pattern><template>Đối với học phần tự chọn, nếu sinh viên tích lũy số tín chỉ nhiều hơn yêu cầu của nhóm học phần tự chọn, khi xét tốt nghiệp sinh viên có thể lựa chọn học phần có điểm cao để tính vào điểm trung bình chung tích lũy. Tất cả các học phần tự chọn được thể hiện trên bảng điểm toàn khóa.</template></category>
 	
 	<!--Nghĩ học-->
-	<category><pattern>Nghĩ học</pattern><template>Sinh viên xin nghỉ ốm trong quá trình học hoặc trong đợt thi, phải viết đơn xin phép gửi trường khoa trong vòng một tuần kể từ ngày ốm, kèm theo giấy chứng nhận của cơ quan y tế trường, hoặc y tế địa phương hoặc của bệnh viện.</template></category>
-	<category><pattern>Nghỉ học</pattern><template><srai>Nghĩ học</srai></template></category>
-	<category><pattern>Xin nghỉ học</pattern><template><srai>Nghĩ học</srai></template></category>
-	<category><pattern>Xin nghĩ học</pattern><template><srai>Nghĩ học</srai></template></category>
+	<category><pattern>^ Nghỉ học ^</pattern><template>Sinh viên xin nghỉ ốm trong quá trình học hoặc trong đợt thi, phải viết đơn xin phép gửi trường khoa trong vòng một tuần kể từ ngày ốm, kèm theo giấy chứng nhận của cơ quan y tế trường, hoặc y tế địa phương hoặc của bệnh viện.</template></category>	
 
 	<!--Xếp hạng năm đào tạo-->
 	<category><pattern>Xếp hạng năm đào tạo</pattern><template><think><set name="topic">năm đào tạo</set></think>Sau mỗi học kỳ căn cứ vào khối lượng kiến thức tích lũy, sinh viên được xếp hạng năm đào tạo: sinh viên năm thứ nhất, sinh viên năm thứ hai, sinh viên năm thứ ba, sinh viên năm thứ tư.</template></category>
@@ -582,6 +581,23 @@
 	<category><pattern>* Giới thiệu trường</pattern><template><srai>giới thiệu trường</srai></template></category>
 
 	<!--Phòng ban-->
+	 <category><pattern>^ PHÒNG BAN ^</pattern><template>Trường hiện tại có 7 <set name="topic">phòng ban</set></template></category>
+
+	<category><pattern>LIỆT KÊ PHÒNG BAN</pattern>
+		<template>
+			1. Phòng đào tạo
+			<br/>2. Phòng công tác Chính trị và Quản lý sinh viên
+			<br/>3. Phòng nghiên cứu khoa học - Hợp tác quốc tế - Thanh thanh - pháp chế
+			<br/>4. Phòng đảm bảm chất lượng và khảo thí
+			<br/>5. Phòng tổ chức hành chính
+			<br/>6. Phòng quản trị thiết bị
+			<br/>7. Phòng tài chính kế toán
+		</template>
+	</category>
+
+	 <topic name="phòng ban">
+		<category><pattern>LIỆT KÊ</pattern><template><srai>LIỆT KÊ PHÒNG BAN</srai></template></category>
+    </topic>
 
 	<category>
 	    <pattern>phòng đào tạo</pattern>
@@ -660,6 +676,8 @@
 		<br/>16.Công nghệ sinh học</template>
 	</category>
 
+	<category><pattern>Logistics</pattern><template>Logistics và quản lí chuỗi cung ứng là một ngành học thuộc Khoa Quản Lí Công Nghiệp</template></category>
+
 	<category><pattern>* TRƯỜNG CÓ BAO NHIÊU NGÀNH HỌC</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
 	<category><pattern>* TRƯỜNG CÓ BAO NHIÊU NGÀNH HỌC *</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
 	<category><pattern>TRƯỜNG CÓ BAO NHIÊU NGÀNH HỌC *</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
@@ -712,5 +730,6 @@
 
 	<category><pattern>Các trung tâm tại trường</pattern><template><srai>Trường có bao nhiêu trung tâm</srai></template></category>
 	<category><pattern>^ trung tâm ^ trường ^</pattern><template><srai>Trường có bao nhiêu trung tâm</srai></template></category>
+	<category><pattern>TRUNG TÂM</pattern><template><srai>Trường có bao nhiêu trung tâm</srai></template></category>
 
 </aiml>

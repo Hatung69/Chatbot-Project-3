@@ -17,11 +17,11 @@
 
     <category>
         <pattern>ok</pattern>
-        <template>
-            <random>
-                <li>ok</li>
-            </random>
-        </template>
+        <template>ok</template>
+    </category>
+    <category>
+        <pattern>Ngon</pattern>
+        <template>Ngon cái gì mà ngon</template>
     </category>
 
 </aiml>
