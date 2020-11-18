@@ -47,17 +47,18 @@
 	    <pattern>Hội phí quỹ khuyến học</pattern>
 	    <template>Hội phí quỹ khuyến học 2000đ/tháng | 24000đ/năm</template>
 	</category>	
+	<category><pattern>QŨY KHUYẾN HỌC</pattern><template><srai>Hội phí quỹ khuyến học</srai></template></category>	
 
 	<!-- Đăng kí học phần -->
 	<category><pattern>đăng ký</pattern><template>bạn muốn đăng ký gì nào?</template></category>
 	<category>
 		<pattern>đăng ký học phần</pattern>
-		<that>đăng ký</that>
+		<that>bạn muốn đăng ký gì nào</that>
 		<template><srai>đăng ký học phần là gì</srai></template>
 	</category>
 	<category>
 		<pattern>đăng kí học phần</pattern>
-		<that>đăng ký</that>
+		<that>bạn muốn đăng ký gì nào</that>
 		<template><srai>đăng ký học phần là gì</srai></template>
 	</category>
 	<category><pattern>đăng ký học phần là gì</pattern><template>Trước khi bắt đầu mỗi học kỳ, tùy theo khả năng và điều kiện học tập của bản thân, từng sinh viên phải đăng ký học các học phần dự định sẽ học trong học kỳ đó với phòng đào tạo của trường.<think><set name = "topic">Đăng ký học phần</set></think></template></category>
@@ -373,8 +374,11 @@
 
 	<!--Đăng ký học lại-->
 	<category><pattern>Trường hợp phải đăng kí học lại</pattern><template>Sinh viên có học phần bắt buộc bị điểm F phải đăng ký học lại học phần đó ở một trong các học kỳ tiếp theo cho đến khi đạt điểm A+, A, B+, B, C+, C, D+ hoặc D.<br/>Sinh viên có học phần tự chọn bị điểm F có thể đăng ký học lại học phần đó hoặc đổi sang học phần tự chọn tương đương khác.</template></category>
+	<category><pattern>^ học lại ^</pattern><template><srai>Trường hợp phải đăng kí học lại</srai>></template></category>
 	<category><pattern>Cải thiện điểm</pattern><template>Các học phần đã tích lũy ở mức điểm D, D+, C, C+, B, B+, sinh viên có thể đăng ký học lại để cải thiện kết quả. Điểm của học phần được tính vào điểm trung bình chung tích lũy sẽ là điểm cao nhất trong các lần học. Điểm của các lần học sẽ được thể hiện trên bảng điểm toàn khóa.</template></category>
+	<category><pattern>Học cải thiện</pattern><template>Các học phần đã tích lũy ở mức điểm D, D+, C, C+, B, B+, sinh viên có thể đăng ký học lại để cải thiện kết quả. Điểm của học phần được tính vào điểm trung bình chung tích lũy sẽ là điểm cao nhất trong các lần học. Điểm của các lần học sẽ được thể hiện trên bảng điểm toàn khóa.</template></category>
 	<category><pattern>Lựa chọn điểm xét tốt nghiệp</pattern><template>Đối với học phần tự chọn, nếu sinh viên tích lũy số tín chỉ nhiều hơn yêu cầu của nhóm học phần tự chọn, khi xét tốt nghiệp sinh viên có thể lựa chọn học phần có điểm cao để tính vào điểm trung bình chung tích lũy. Tất cả các học phần tự chọn được thể hiện trên bảng điểm toàn khóa.</template></category>
+	<category><pattern>^ Chọn điểm ^</pattern><template><srai>Lựa chọn điểm xét tốt nghiệp</srai>></template></category>
 	
 	<!--Nghĩ học-->
 	<category><pattern>^ Nghỉ học ^</pattern><template>Sinh viên xin nghỉ ốm trong quá trình học hoặc trong đợt thi, phải viết đơn xin phép gửi trường khoa trong vòng một tuần kể từ ngày ốm, kèm theo giấy chứng nhận của cơ quan y tế trường, hoặc y tế địa phương hoặc của bệnh viện.</template></category>	
@@ -438,9 +442,7 @@
 
 	<category><pattern>Đình chỉ học tập</pattern><template>Các trường hợp bị định chỉ học tập trong 1 học kỳ: Bị kỷ luật ở mức đình chỉ học tập; Có điểm rèn luyện yếu, kém trong 2 học kỳ liên tiếp.<br/>Đình chỉ học tập 1 năm trong trường hợp bị kỷ luật ở mức đình chỉ học tập.</template></category>
 	<category><pattern>Đình chỉ</pattern><template><srai>Đình chỉ học tập</srai></template></category>
-	<category><pattern>* Đình chỉ</pattern><template><srai>Đình chỉ học tập</srai></template></category>
-	<category><pattern>* Đình chỉ *</pattern><template><srai>Đình chỉ học tập</srai></template></category>
-	<category><pattern>Đình chỉ *</pattern><template><srai>Đình chỉ học tập</srai></template></category>
+	<category><pattern>^ Đình chỉ ^</pattern><template><srai>Đình chỉ học tập</srai></template></category>
 	
 	<!--Buộc thôi học-->
 
@@ -480,10 +482,16 @@
 
 	<!--Chuyển trường-->
 
+	<category><pattern>CHUYỂN TRƯỜNG</pattern><template>Bạn muốn biết gì về vấn đề <set name="topic">chuyển trường</set> nào?</template></category>
 	<category><pattern>Điều kiện được xét chuyển trường</pattern><template>Điều kiện để được xét chuyển trường:<br/>a. Trong thời gian học tập, nếu gia đình chuyển nơi cư trú hoặc sinh viên có hoàn cảnh khó khăn, cần thiết phải chuyển đến trường gần nơi cư trú của gia đình để thuận lợn trong học tập.<br/>b. Xin chuyển đến trường có cùng ngành hoặc thuộc cùng nhóm ngành với ngành đào tạo mà sinh viên đang học.<br/>c. Được sự đồng ý của Hiệu trưởng trường xin chuyển đi và trường xin chuyển đến.<br/>d. Không thuộc một trong các trường hợp không được phép chuyển trường.</template></category>
 	<category><pattern>Không được phép chuyển trường</pattern><template>Sinh viên không được phép chuyển trường trong các trường hợp sau đây:<br/>a. Sinh viên có tổng điểm các môn thi của tổ hợp môn thi dùng để xét tuyển thấp hơn điểm trúng tuyển của trường xin chuyển đến.<br/>b. Sinh viên thuộc diện năm ngoài vùng tuyển quy định của trường xin chuyển đến.<br/>c. Sinh viên năm thứ nhất và năm cuối khóa.<br/>d. Sinh viên đang trong thời gian bị kỷ luật từ cảnh cáo trở lên.</template></category>
 	<category><pattern>Thủ tục chuyển trường</pattern><template>Sinh viên xin chuyển trường phải làm hồ sơ xin chuyển trường theo quy định của nhà trường. Hiệu trưởng trường có sinh viên xin chuyển đến quyết định tiếp nhận hoặc không tiếp nhận; quyết định việc học tập tiếp tục của sinh viên, công nhận các học phần mà sinh viên chuyển đến được chuyển đổi kết quả và số học phần phải học bổ sung, trên cơ sở so sánh chương trình ở trường sinh viên xin chuyển đi và trường xin chuyển đến.</template></category>
-	<category><pattern>* Không được phép chuyển trường</pattern><template><srai>Không được phép chuyển trường</srai></template></category>
+	<category><pattern>^ Không được phép chuyển trường</pattern><template><srai>Không được phép chuyển trường</srai></template></category>
+
+	<topic name="chuyển trường">
+		<category><pattern>ĐIỀU KIỆN</pattern><template><srai>Điều kiện được xét chuyển trường</srai></template></category>
+		<category><pattern>THỦ TỤC</pattern><template><srai>Thủ tục chuyển trường</srai></template></category>
+	</topic>
 	
 	<!--Kiểm tra và thi học phần-->
 	
@@ -496,7 +504,10 @@
 		<br/>- Điểm thi giữa học phần
 		<br/>- Điểm tiếu luận
 		<br/>- Điểm thi kết thúc học phần (bắt buộc và có trọng số không dưới 50%)
-		</template></category>
+		</template>
+	</category>
+	<category><pattern>Tính điểm học phần</pattern><template><srai>Điểm học phần được tính như thế nào</srai></template></category>
+
 	<category><pattern>Thời gian ôn thi</pattern><template>Thời gian dành cho ôn thi mỗi học phần tỷ lệ thuận với số tín chỉ của học phần đó, ít nhất 2/3 ngày cho một tín chỉ. Hiệu trưởng quy định cụ thể thời gian dành cho ôn thi và thời gian thi cho các kỳ thi.</template></category>
 	<category><pattern>Hình thức thi</pattern><template>Hình thức thi kết thúc học phần có thể là thi viết (trắc nghiệm hoặc tự luận), vấn đáp, viết tiểu luận, làm bài tập lớn, hoặc kết hợp giữa các hình thức trên.</template></category>
 	<category><pattern>Bảo quản bài thi</pattern><template>Hiệu trưởng quy định việc bảo quản các bài thi, quy trình chấm thi và lưu giữ các bài thi sau khi chấm. Thời gian lưu giữ các bài thi viết, tiểu luận, bài tập lớn ít nhất là hai năm, kể từ ngày thi hoặc ngày nộp tiểu luận, bài tập lớn.</template></category>
@@ -528,9 +539,11 @@
 	<br/>F = 0.0
 	</template></category>
 
+	<category><pattern>^ ĐIỂM TRUNG BÌNH CHUNG ^</pattern><template><srai>Cách tính điểm trung bình chung</srai></template></category>
+
 	<!--Xét và công nhận tốt nghiệp-->
 	<category><pattern>Thời gian làm khóa luận, luận văn tốt nghiệp hoặc làm tiểu luận tốt nghiệp</pattern><template>Đầu học kỳ cuối khóa, các sinh viên được phép đăng ký làm đồ án, khóa luận, luận văn tốt nghiệp hoặc làm tiểu luận tốt nghiệp và học thêm một số học phần chuyên môn được quy định.</template></category>
-	<category><pattern>Đối tượng làm luận văn</pattern><template>Làm đồ án, khóa luận, luận văn tốt nghiệp: áp dụng cho sinh viên đạt mức quy định của trường. Đồ án, khóa luận, luận văn tốt nghiệp là học phần có khối lượng 10 tín chỉ cho trình độ đại học.</template></category>
+	<category><pattern>Đối tượng làm luận văn</pattern><template>Làm đồ án, khóa luận, luận văn tốt nghiệp: áp dụng cho sinh viên đạt mức quy định của trường. Đồ án tốt nghiệp, khóa luận, luận văn tốt nghiệp là học phần có khối lượng 10 tín chỉ cho trình độ đại học.</template></category>
 	<category><pattern>Làm tiểu luận</pattern><template>Làm tiểu luận tốt nghiệp, học và thi một số học phần chuyên môn: sinh viên không được giao làm đồ án, khóa luận, luận văn tốt nghiệp phải đăng ký làm tiểu luận tốt nghiệp 4 tín chỉ và học thêm một số học phần chuyên môn 6 tín chỉ.</template></category>
 	<category><pattern>Học thay thế</pattern><template>Nếu sinh viên không làm luận văn tốt nghiệp, tiểu luận tốt nghiệp thì phải học thay thế 10 tín chỉ trong nhóm học phần thay thế luận văn tốt nghiệp của chương trình đào tạo.</template></category>
 	<category><pattern>Thực tập tốt nghiệp</pattern><template>Tùy theo từng chương trình, Khoa đề xuất quy định nội dung, hình thức thực tập tốt nghiệp; hình thức chấm thực tập tốt nghiệp phù hợp với đặc điểm các chương trình của trường và trình Hiệu trưởng quyết định.</template></category>
@@ -559,6 +572,10 @@
 
 	<category><pattern>Công nhập tốt nghiệp</pattern><template><srai>Điều kiện xét tốt nghiệp</srai></template></category>
 	<category><pattern>bằng tốt nghiệp</pattern><template><srai>Loại bằng tốt nghiệp</srai></template></category>
+	<category><pattern>LÀM LUẬN VĂN</pattern><template><srai>Đối tượng làm luận văn</srai></template></category>
+	<category><pattern>LUẬN VĂN</pattern><template><srai>Đối tượng làm luận văn</srai></template></category>
+	<category><pattern>TIỂU LUẬN</pattern><template><srai>Làm tiểu luận</srai></template></category>
+	<category><pattern>ĐỒ ÁN</pattern><template>Đồ án là học phần có 2 tín chỉ, là học phần bắt buộc và tên học phần đồ án sẽ khác nhau đối với mỗi ngành học, nên lúc đăng kí học phần hãy chú ý kĩ nhé!</template></category>
 
 	<!--Xử lí vi phạm-->
 
@@ -567,7 +584,6 @@
 	
 	<category><pattern>^ Thi hộ ^</pattern><template><srai>Đi thi hộ</srai></template></category>
 	<category><pattern>Vi phạm</pattern><template><srai>Vi phạm quy chế</srai></template></category>
-	<category><pattern>Vi phạm qui chế</pattern><template><srai>Vi phạm quy chế</srai></template></category>
 
 	<!-- Giới thiệu trường -->
 
@@ -576,9 +592,7 @@
 		Trường Đại học Kỹ thuật - Công nghệ Cần Thơ (CTUT - Can Tho University of Technology) là trường đại học công lập chuyên đào tạo khối ngành kỹ thuật tại Thành phố Cần Thơ. Trường trực thuộc Ủy ban Nhân dân Thành phố Cần Thơ, chịu sự giám sát về giáo dục của Bộ Giáo dục và Đào tạo.
 		</template>
 	</category>
-    <category><pattern>* Giới thiệu trường *</pattern><template><srai>giới thiệu trường</srai></template></category>
-	<category><pattern>Giới thiệu trường *</pattern><template><srai>giới thiệu trường</srai></template></category>
-	<category><pattern>* Giới thiệu trường</pattern><template><srai>giới thiệu trường</srai></template></category>
+    <category><pattern>^ Giới thiệu trường ^</pattern><template><srai>giới thiệu trường</srai></template></category>
 
 	<!--Phòng ban-->
 	 <category><pattern>^ PHÒNG BAN ^</pattern><template>Trường hiện tại có 7 <set name="topic">phòng ban</set></template></category>
@@ -675,6 +689,8 @@
 		<br/>15.Công nghệ thực phẩm
 		<br/>16.Công nghệ sinh học</template>
 	</category>
+
+	<category><pattern>NGÀNH HỌC</pattern><template><srai>trường có bao nhiêu ngành học</srai></template></category>
 
 	<category><pattern>Logistics</pattern><template>Logistics và quản lí chuỗi cung ứng là một ngành học thuộc Khoa Quản Lí Công Nghiệp</template></category>
 
