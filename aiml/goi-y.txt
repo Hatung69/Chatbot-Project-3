@@ -1,0 +1,126 @@
+Các loại học phần
+Thời gian đào tạo
+Học phần bắt buộc là gì
+Học phần tự chọn là gì
+Học phần tiên quyết là gì
+Học phần học trước là gì
+Học phần song hành là gì
+Học phần tương đương
+Học phần thay thế là gì
+Học phần điều kiện là gì
+Tín chỉ là gì
+Thời gian của một tiết học
+Mỗi ngày có bao nhiêu tiết học
+Vắng học có bị cấm thi
+Thang điểm chữ
+Thời gian đào tạo tối đa là bao nhiêu
+Một năm học có bao nhiêu học kỳ
+Lớp học phần là gì
+Số lượng sinh viên tối thiểu của một lớp học phần
+Lớp sinh viên là gì
+Lớp sinh viên giải thế
+Cố vấn học tập là gì
+Số tín chỉ tối thiểu trong mỗi học kỳ
+Rút học phần là gì
+Thời gian được phép rút học phần
+Điều kiện rút học phần đã đăng ký
+Trường hợp phải đăng kí học lại
+Cải thiện điểm
+Lựa chọn điểm xét tốt nghiệp
+Nghỉ học
+Xếp hạng năm đào tạo
+Xếp loại học lực
+Kết quả học tập học kỳ phụ
+Nghỉ học tạm thời
+Cảnh báo học vụ
+Đình chỉ học tập
+Buộc thôi học
+Đuổi học
+Học cùng lúc hai chương trình
+Điều kiện học cùng lúc hai chương trình
+Thời gian học chương trình thứ hai
+Điều kiện xét tốt nghiệp chương trình thứ hai
+Chuyển trường
+Điều kiện được xét chuyển trường
+Không được phép chuyển trường
+Thủ tục chuyển trường
+Kiểm tra và thi học phần
+Cách tính điểm học phần
+Thời gian ôn thi
+Hình thức thi
+Bảo quản bài thi
+Thi vấn đáp
+Vắng thi
+Kỳ thi phụ
+Cách tính điểm đánh giá
+Cách tính điểm trung bình chung
+Xét và công nhận tốt nghiệp
+Thời gian làm luận văn tốt nghiệp
+Đối tượng làm luận văn
+Làm tiểu luận
+Học thay thế
+Thực tập tốt nghiệp
+Điều kiện xét tốt nghiệp
+Thời gian xét tốt nghiệp
+Bằng tốt nghiệp
+Loại bằng tốt nghiệp
+Hạ loại tốt nghiệp
+Công nhận tốt nghiệp
+Đồ án
+Xử lí vi phạm
+Vi phạm quy chế
+Đi thi hộ
+Giới thiệu trường
+Phòng ban
+Phòng đào tạo
+Phòng công tác Chính trị và Quản lý sinh viên
+Phòng nghiên cứu khoa học
+Phòng đảm bảm chất lượng và khảo thí
+Phòng tổ chức hành chính
+Phòng quản trị thiết bị
+Phòng tài chính kế toán
+Trường có bao nhiêu ngành học
+Logistics
+Trường có bao nhiêu khoa
+Công nghệ thông tin
+Điện - Điện tử - Viễn thông
+Kỹ thuật cơ khí
+Kỹ thuật xây dựng
+Quản lý công nghiệp
+CN thực phẩm - CN sinh học
+Khoa học cơ bản
+Trường có bao nhiêu trung tâm
+Trung tâm Ngoại ngữ - Tin học
+Trung tâm Đào tạo - Bồi dưỡng
+Trung tâm Kỹ thuật năng lượng - Chuyển giao công nghệ
+Quỹ khuyến học
+Đăng ký học phần
+Đăng ký học phần ở đâu
+Thời gian đăng ký học phần
+Đăng ký sớm là gì
+Đăng ký bình thường là gì
+Đăng ký muộn là gì
+Khóa mới nhập học có cần đăng ký không
+Chứng chỉ
+Chứng chỉ toeic là gì
+Chứng chỉ ngoại ngữ
+Chứng chỉ tin học
+Hỗ trợ học phí
+Đối tượng được hỗ trợ học phí
+Hồ sơ hỗ trợ chi phí học bao gồm những gì
+Địa điểm nhận hồ sơ và giải đáp thắc mắc
+Kết quả xét duyệt hỗ trợ học phí
+Đóng học phí
+Số tài khoản của trường là gì
+Cú pháp chuyển khoản
+Đóng học phí online
+Thời gian đóng học phí
+Không đóng học phí sẽ ra sao
+Đối tượng được cấp học bổng
+Những học kỳ được xét học bổng
+Tiêu chuẩn cấp học bổng
+Xếp loại học bổng khuyến khích học tập
+Thời gian cấp học bổng
+Phương thức nhận học bổng
+Giá trị học bổng
+Cấu trúc mail CTUT
