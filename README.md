@@ -1,14 +1,3 @@
-# Chatbot Project 3
-
-Đồ án 3 - Làm con Chatbot
-
-Frontend: https://github.com/Hatung69/Chatbot-frontend
-Back-end: https://github.com/Hatung69/Chatbot-Backend
-
-Deploy: https://hatung69.github.io/Chatbot-frontend/
-
-
-Deploy:
 <h2 align="center">Website Chatbot kịch bản</h2>
 
 > Website chatbot hỗ trợ học tập cho sinh viên, giúp tìm kiếm những thông tin cần thiết trong suốt quá trình học tập:
@@ -20,11 +9,14 @@ Deploy:
 > ...
 
 ### Thông tin phần mềm 🌐
-- &nbsp; Framework: Angular 10
-- &nbsp; Cơ sở dữ liệu: Firebase
-- &nbsp; Công cụ hỗ trợ: VSCode
+- &nbsp; Ngôn ngữ lập trình: Java
+- &nbsp; Framework: Angular 11, Spring Boot
+- &nbsp; Ngôn ngữ trí tuệ nhân tạo: AIML
+- &nbsp; Công cụ hỗ trợ: VSCode, Eclipse
 
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <b><em>Truy cập Website <a href="https://hatung69.github.io/Chatbot-frontend/">Tại đây</a></em></b> 😊
+Frontend: https://github.com/Hatung69/Chatbot-frontend </br>
+Back-end: https://github.com/Hatung69/Chatbot-Backend
 
 ### 1 vài hình ảnh 🌱
 
